@@ -177,7 +177,7 @@ public class Scanisette extends Application {
             ((InitController) currentSceneController).logAreaAppendTextLn("\r\n");
             ((InitController) currentSceneController).logAreaAppendTextLn("\r\n###### Lancement du scanner dans " + node.getText() + " secondes");
             long delay = Long.parseLong(node.getText(), 10) * 1000L;
-            launchHome(delay);
+            loadSceneAfterDelay("Home", delay);
 
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -186,13 +186,13 @@ public class Scanisette extends Application {
         }
     }
 
-    public void launchHome(long delay) {
+    public void loadSceneAfterDelay(String scene, long delay) {
         TimerTask task = new TimerTask() {
             public void run() {
                 System.out.println("Task performed on: " + new Date() + "n" +
                         "Thread's name: " + Thread.currentThread().getName());
                 Platform.runLater(() -> {
-                    loadScene("Home");
+                    loadScene(scene);
                 });
             }
         };
