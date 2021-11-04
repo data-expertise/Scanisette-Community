@@ -15,7 +15,8 @@ software, a great guy
 Thanks for the coders who expose their codes and who help me with some libs or other softwares
 Quartz : http://www.quartz-scheduler.org/  
 StreamGobbler : i don't know this technic before this project to thank for the creator SceneBuilder : Nice software to
-make javaFX scene
+make javaFX scene  
+Regex test : https://regex101.com/r/fVTQjy/4/
 
 And thanks for the Java creator. I remember my computer studies in University of Orsay (26 years ago in 2021).  
 I was a physician and change for computer sciences.  
