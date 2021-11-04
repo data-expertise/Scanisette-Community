@@ -21,28 +21,13 @@ public class ResultSnatchedController extends _MetaController {
 
     @FXML
     void initialize() {
-        UiTool.setLogo(imvLogo,mainApp.imageProportionalScale);
+        UiTool.setLogo(imvLogo, mainApp.imageProportionalScale);
     }
 
     public void load() {
         mainApp.appScheduler.usbKeyCheckSnatchedJobStop();
         org.dom4j.Node node = mainApp.docConfig.selectSingleNode("/config/scheduler/resultSnatchedScreenInSeconds");
         long delay = Long.parseLong(node.getText(), 10) * 1000L;
-        mainApp.launchHome(delay);
-
-        TimerTask task = new TimerTask() {
-            public void run() {
-                System.out.println("Task performed on: " + new Date() + "n" +
-                        "Thread's name: " + Thread.currentThread().getName());
-                Platform.runLater(() -> {
-                    mainApp.loadScene("Home");
-                });
-            }
-        };
-        Timer timer = new Timer("Timer");
-
-
-
-        timer.schedule(task, 10000);
+        mainApp.loadSceneAfterDelay("Scene", delay);
     }
 }
