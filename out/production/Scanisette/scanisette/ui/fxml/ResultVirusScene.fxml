@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scanisette.ui.controllers.ResultVirusController">
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="1106.0" layoutX="-10.0" layoutY="-11.0" stroke="BLACK" strokeType="INSIDE" width="1944.0" />
+      <ImageView fitHeight="1067.0" fitWidth="1924.0" layoutX="24.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/background2.png" />
+         </image>
+      </ImageView>
+      <Circle fill="#ff1e41d4" layoutX="962.0" layoutY="357.0" radius="214.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <ImageView fx:id="imvLogo" fitHeight="180.0" fitWidth="200.0" layoutX="1660.0" layoutY="840.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/your_logo_here.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="110.0" fitWidth="110.0" layoutX="645.0" layoutY="666.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/corrompu_coul.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="319.0" fitWidth="110.0" layoutX="903.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/clé.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1077.0" layoutY="714.0" prefHeight="79.0" prefWidth="329.0" styleClass="font_cata" stylesheets="@../css/styles.css" text="UN VIRUS..." textFill="#5f8bfa" wrapText="true">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="815.0" layoutY="660.0" prefHeight="79.0" prefWidth="415.0" styleClass="font_cata" stylesheets="@../css/styles.css" text="VOTRE CLÉ USB" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="822.0" layoutY="714.0" prefHeight="79.0" prefWidth="310.0" styleClass="font_cata" stylesheets="@../css/styles.css" text="CONTIENT" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="637.0" layoutY="848.0" prefHeight="30.0" prefWidth="689.0" styleClass="font_cata_M" stylesheets="@../css/styles.css" text="VEUILLEZ CONSULTER UN TECHNICIEN" textFill="#5f8bfa" wrapText="true">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

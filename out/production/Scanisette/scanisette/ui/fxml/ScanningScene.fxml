@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scanisette.ui.controllers.ScanningController">
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="1106.0" layoutX="-11.0" layoutY="-13.0" stroke="BLACK" strokeType="INSIDE" width="1944.0" />
+      <ImageView fitHeight="1067.0" fitWidth="1924.0" layoutX="23.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/background2.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5f8bfa" height="110.0" layoutX="628.0" layoutY="775.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="660.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5f8bfa" height="60.0" layoutX="630.0" layoutY="569.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="654.0" />
+      <Ellipse fill="#5f8bfa" layoutX="1277.0" layoutY="599.0" radiusX="37.0" radiusY="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Ellipse fill="#5f8bfa" layoutX="628.0" layoutY="599.0" radiusX="37.0" radiusY="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Ellipse fill="WHITE" layoutX="626.0" layoutY="597.0" radiusX="18.0" radiusY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Ellipse fill="WHITE" layoutX="1275.0" layoutY="597.0" radiusX="18.0" radiusY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <ProgressBar fx:id="progressBar" layoutX="622.0" layoutY="583.0" prefHeight="28.0" prefWidth="660.0" progress="0.0" styleClass="super-fx-progress-bar" stylesheets="@../css/styles.css" />
+      <Label fx:id="labZoneInfo1" layoutX="647.0" layoutY="775.0" prefHeight="55.0" prefWidth="620.0" styleClass="font_cata_M" stylesheets="@../css/styles.css" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="labZoneInfo2" layoutX="648.0" layoutY="830.0" prefHeight="55.0" prefWidth="620.0" styleClass="font_cata_M" stylesheets="@../css/styles.css" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imvLogo" fitHeight="180.0" fitWidth="200.0" layoutX="1660.0" layoutY="840.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/your_logo_here.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="283.0" fitWidth="279.0" layoutX="821.0" layoutY="214.0">
+         <image>
+            <Image url="@../assets/GIF_scan_cle_usb_boucle.gif" />
+         </image>
+      </ImageView>
+      <Label layoutX="698.0" layoutY="645.0" prefHeight="79.0" prefWidth="310.0" styleClass="font_cata" stylesheets="@../css/styles.css" text="ANALYSE " textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="923.0" layoutY="645.0" prefHeight="79.0" prefWidth="329.0" styleClass="font_cata" stylesheets="@../css/styles.css" text="EN COURS..." textFill="#5f8bfa" wrapText="true">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="710.0" layoutY="720.0" prefHeight="28.0" prefWidth="473.0" styleClass="font_cata_M" stylesheets="@../css/styles.css" text="NOUS RECHERCHONS DES VIRUS" textFill="#5f8bfa" wrapText="true">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <terminal>
+        <id>XYZ-1234</id>
+        <name>Surface-Franck</name>
+    </terminal>
+    <application>
+        <name>Scanisette-Community</name>
+        <version>1.0.0</version>
+    </application>
+    <logo>
+        <enable>yes</enable>
+        <file>resources/logo_data_expertise.png</file>
+    </logo>
+    <logger>
+        <file>c:\temp\scanisette\scanisette.log</file>
+    </logger>
+    <result>
+        <positiveFileCountForVirusFound>1</positiveFileCountForVirusFound>
+        <positiveFileCountForSuspectFound>0</positiveFileCountForSuspectFound>
+        <file>c:\temp\scanisette\[DATE]-result.json</file>
+    </result>
+    <scheduler>
+        <initScreenJobDelayInSeconds>2</initScreenJobDelayInSeconds>
+        <swapScreensJobDelayInSeconds>4</swapScreensJobDelayInSeconds>
+        <usbKeyCheckInJobDelayInSeconds>3</usbKeyCheckInJobDelayInSeconds>
+        <usbKeyCheckOutJobDelayInSeconds>3</usbKeyCheckOutJobDelayInSeconds>
+        <usbKeyCheckSnatchedJobDelayInSeconds>3</usbKeyCheckSnatchedJobDelayInSeconds>
+        <resultSnatchedScreenInSeconds>10</resultSnatchedScreenInSeconds>
+        <antivirusGetLastUpdateDateInHours>4</antivirusGetLastUpdateDateInHours>
+    </scheduler>
+    <tools>
+        <tool>
+            <name>USBDeview</name>
+            <folder>c:\Utils\usbdeview\</folder>
+            <executable>USBDeview.exe</executable>
+            <parameters>/sxml [FILE]</parameters>
+            <file>c:\temp\scanisette\usbkeys.xml</file>
+        </tool>
+    </tools>
+    <scanners>
+        <antivirus>
+            <enable>yes</enable>
+            <name>Clamav</name>
+            <folder>c:\program files\clamav\</folder>
+            <executable>clamscan.exe</executable>
+            <parameters>-r -v --remove=no [USB]</parameters>
+            <progressPattern>NoProgress</progressPattern>
+            <filePattern>[USB](.+):\s+(.+)\s+(FOUND)</filePattern>
+            <commandForDate>clamscan.exe --version</commandForDate>
+            <commandForDatePattern>ClamAV\s.+\/(.+)</commandForDatePattern>
+            <fileForDate>c:\Program Files\ClamAV\database\daily.cld</fileForDate>
+        </antivirus>
+    </scanners>
+    <screens>
+        <screen name="Home">
+            <zone1>Adopter le bon reflexe pour protéger votre réseau informatique</zone1>
+            <zone2></zone2>
+            <number1>70 %</number1>
+            <text1>des utilisateurs font usages de clés USB venues de l'extérieur et les connectent sur le réseau de l'entreprise</text1>
+            <number2>44 %</number2>
+            <text2>des clés USB contiendraient au moins un fichier présentant des risques</text2>
+            <number3>30 %</number3>
+            <text3>des infections proviennent de supports USB</text3>
+            <text4>Scanisette analyse les fichiers sur un support amovible pour détecter les virus</text4>
+        </screen>
+        <screen name="Invitation">
+            <zone1>Adopter le bon reflexe pour protéger votre réseau informatique</zone1>
+            <zone2></zone2>
+        </screen>
+    </screens>
+</config>

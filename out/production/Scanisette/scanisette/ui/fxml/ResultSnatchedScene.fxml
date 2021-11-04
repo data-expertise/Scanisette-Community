@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scanisette.ui.controllers.ResultSnatchedController">
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="1106.0" layoutX="-9.0" layoutY="-13.0" stroke="BLACK" strokeType="INSIDE" width="1944.0" />
+      <ImageView fitHeight="1067.0" fitWidth="1924.0" layoutX="23.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/background2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imvLogo" fitHeight="180.0" fitWidth="200.0" layoutX="1660.0" layoutY="840.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/your_logo_here.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="110.0" fitWidth="110.0" layoutX="645.0" layoutY="666.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/arrache.png" />
+         </image>
+      </ImageView>
+      <Circle fill="#a83a3a" layoutX="961.0" layoutY="362.0" radius="210.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" />
+      <ImageView fitHeight="316.0" fitWidth="104.0" layoutX="904.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/clé.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="973.0" layoutY="715.0" prefHeight="79.0" prefWidth="329.0" styleClass="font_cata" stylesheets="@../css/styles.css" text="ARRACHÉE..." textFill="#5f8bfa" wrapText="true">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="818.0" layoutY="661.0" prefHeight="79.0" prefWidth="415.0" styleClass="font_cata" stylesheets="@../css/styles.css" text="VOTRE CLÉ USB" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="825.0" layoutY="715.0" prefHeight="79.0" prefWidth="159.0" styleClass="font_cata" stylesheets="@../css/styles.css" text="A ÉTÉ " textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="681.0" layoutY="833.0" prefHeight="30.0" prefWidth="689.0" styleClass="font_cata_M" stylesheets="@../css/styles.css" text="VEUILLEZ CONSULTER UN TECHNICIEN" textFill="#5f8bfa" wrapText="true">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="net.sf.sevenzipjbinding:sevenzipjbinding:16.02-2.01" type="repository">
+    <properties maven-id="net.sf.sevenzipjbinding:sevenzipjbinding:16.02-2.01" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/sevenzipjbinding-16.02-2.01.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/lib/sevenzipjbinding-16.02-2.01-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

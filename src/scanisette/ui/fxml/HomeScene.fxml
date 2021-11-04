@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scanisette.ui.controllers.HomeController">
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="1106.0" layoutX="-11.0" layoutY="-14.0" stroke="BLACK" strokeType="INSIDE" width="1944.0" />
+      <ImageView fitHeight="1139.0" fitWidth="1916.0" layoutX="4.0" layoutY="1.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/background.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#edf2ff" height="904.0" layoutX="120.0" layoutY="84.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="736.0" />
+      <ImageView fitHeight="120.0" fitWidth="91.0" layoutX="1102.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/reseau.png" />
+         </image>
+      </ImageView>
+      <Circle fill="#f5f5f500" layoutX="1146.0" layoutY="247.0" radius="77.0" stroke="#5f8bfa" strokeType="OUTSIDE" strokeWidth="5.0" />
+      <ImageView fitHeight="164.0" fitWidth="172.0" layoutX="1363.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/picto_fichier_risque.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="1096.0" layoutY="552.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/cle_usb.png" />
+         </image>
+      </ImageView>
+      <Circle fill="#ffffff00" layoutX="1142.0" layoutY="602.0" radius="77.0" stroke="#5f8bfa" strokeType="OUTSIDE" strokeWidth="5.0" />
+      <ImageView fitHeight="164.0" fitWidth="172.0" layoutX="1360.0" layoutY="521.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/picto_virus.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imvLogo" fitHeight="180.0" fitWidth="200.0" layoutX="1660.0" layoutY="840.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/your_logo_here.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="243.0" fitWidth="200.0" layoutX="252.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="246.0" layoutY="372.0" prefHeight="243.0" prefWidth="295.0" styleClass="font_cata" stylesheets="@../css/styles.css" text="ANALYSE AUTONOME" wrapText="true">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="246.0" layoutY="547.0" prefHeight="91.0" prefWidth="473.0" styleClass="font_cata" stylesheets="@../css/styles.css" text="DE VOTRE CLÉ USB" textFill="#5f8bfa" wrapText="true">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="labZone1" alignment="CENTER" layoutX="241.0" layoutY="652.0" prefHeight="132.0" prefWidth="473.0" styleClass="font_cata_M" stylesheets="@../css/styles.css" text="Zone 1" textFill="#5f8bfa" wrapText="true">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="labText1" layoutX="1033.0" layoutY="394.0" prefHeight="100.0" prefWidth="208.0" styleClass="font_cata_M" stylesheets="@../css/styles.css" text="des utilisateurs font usages de clés USB venues de l'extérieur et les connectent sur le réseau de l'entreprise" textAlignment="CENTER" textFill="#5f8bfa" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labNumber1" layoutX="1100.0" layoutY="323.0" prefHeight="78.0" prefWidth="115.0" styleClass="font_cata" stylesheets="@../css/styles.css" text="70 %" textAlignment="CENTER" textFill="#5f8bfa" wrapText="true">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="labText2" layoutX="1339.0" layoutY="385.0" prefHeight="100.0" prefWidth="208.0" styleClass="font_cata_M" stylesheets="@../css/styles.css" text="des clés USB contiendraient au moins un fichier présentant des risques " textAlignment="CENTER" textFill="#5f8bfa" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labNumber2" layoutX="1407.0" layoutY="320.0" prefHeight="96.0" prefWidth="117.0" styleClass="font_cata" stylesheets="@../css/styles.css" text="44 %" textAlignment="CENTER" textFill="#5f8bfa" wrapText="true">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="labText3" layoutX="1066.0" layoutY="742.0" prefHeight="100.0" prefWidth="146.0" styleClass="font_cata_M" stylesheets="@../css/styles.css" text="des infections proviennent de supports USB" textAlignment="CENTER" textFill="#5f8bfa" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labNumber3" layoutX="1096.0" layoutY="683.0" prefHeight="86.0" prefWidth="107.0" styleClass="font_cata" stylesheets="@../css/styles.css" text="30 %" textAlignment="CENTER" textFill="#5f8bfa" wrapText="true">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="labText4" layoutX="1349.0" layoutY="703.0" prefHeight="142.0" prefWidth="158.0" styleClass="font_cata_M" stylesheets="@../css/styles.css" text="Scanisette analyse les fichiers sur un support amovible pour détecter les virus" textAlignment="CENTER" textFill="#5f8bfa" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="1148.0" layoutY="1020.0" prefHeight="38.0" prefWidth="736.0" text="Sources : Rapport Honeywell 2018, Source Ponemon 2018 - esdacademy.blogspot.com/2020/10/les-stations-blanches-un-sas-pour.html Pictogrammes : Freepik, xnimrodx, itim2101, Dimitry Miroliubov, Those Icons, Gregor Cresnar | www.flaticon.com" textAlignment="RIGHT" textFill="#5f8bfa" wrapText="true" />
+      <Label fx:id="labZone2" alignment="CENTER" layoutX="238.0" layoutY="824.0" prefHeight="142.0" prefWidth="473.0" styleClass="font_CBYG" stylesheets="@../css/styles.css" text="Zone 2" textFill="#5f8bfa" wrapText="true">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
