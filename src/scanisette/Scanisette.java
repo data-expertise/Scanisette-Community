@@ -384,6 +384,10 @@ public class Scanisette extends Application {
                 currentSceneController.getStylesheets().add(getClass().getResource("ui/css/styles.css").toExternalForm());
                 currentSceneController.load();
 
+                if (scene.equals("Home")) {
+                    mainApp.usbKeySnatched = false;
+                }
+
             } else {
                 currentSceneName = "";
                 logger.severe("Le chargement du fxml a retourné un noeud NULL pour la scène : " + scene);
