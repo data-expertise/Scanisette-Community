@@ -6,7 +6,7 @@ Licensed Under GNU AGPLv3
 
 ## Credit
 
-Thanks to @fjubin (Me) for https://github.com/fjubin/Scanisette-Community for this first version of the project. I am
+Thanks to @fjubin (Me) for this first version of the project. I am
 like Lucky Luke, a lonesome old coder, more than 25 years now, and i allready need help on github and docker :)
 
 Thanks to Hugo Simancas from data-expertise.com for support me in hard time coding and resolve trouble with antivirus

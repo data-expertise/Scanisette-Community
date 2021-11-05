@@ -28,6 +28,6 @@ public class ResultSnatchedController extends _MetaController {
         mainApp.appScheduler.usbKeyCheckSnatchedJobStop();
         org.dom4j.Node node = mainApp.docConfig.selectSingleNode("/config/scheduler/resultSnatchedScreenInSeconds");
         long delay = Long.parseLong(node.getText(), 10) * 1000L;
-        mainApp.loadSceneAfterDelay("Scene", delay);
+        mainApp.loadSceneAfterDelay("Home", delay);
     }
 }
