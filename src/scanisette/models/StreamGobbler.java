@@ -16,23 +16,21 @@ public class StreamGobbler implements Runnable {
     protected InputStream inputStream;
     protected Antivirus antivirus;
 
-    public StreamGobbler( Process process, Antivirus antivirus ) {
+    public StreamGobbler(Process process, Antivirus antivirus) {
         this.process = process;
         this.inputStream = process.getInputStream();
         //this.consumer = consumer;
         this.antivirus = antivirus;
     }
 
-    
 
     @Override
     public void run() {
-        try
-        {
+        try {
             System.out.println("STREAMGOBBLER RUN");
 
 
-            Class<?> customAntivirusClass = Class.forName("scanisette.models."+antivirus.name+"Antivirus");
+            Class<?> customAntivirusClass = Class.forName("scanisette.models." + antivirus.name + "Antivirus");
             Method processLine = customAntivirusClass.getMethod("processLine", String.class, Pattern.class, Pattern.class, String.class);
 
             InputStreamReader isr = new InputStreamReader(inputStream);
@@ -41,20 +39,26 @@ public class StreamGobbler implements Runnable {
             JsonObject resultFromLine;
 
             // https://regex101.com/r/fVTQjy/4/
-            System.out.println(">>>>>> "+ antivirus.progressPattern);
+            System.out.println(">>>>>> " + antivirus.progressPattern);
 
             String filePatternTemp = antivirus.filePattern;
-            String usbEscape = mainApp.currentUsbDrive.path.replace("\\","\\\\");
-            filePatternTemp = filePatternTemp.replace("[USB]",usbEscape);
-            System.out.println(">>>>>> "+ filePatternTemp);
+            String usbEscape = mainApp.currentUsbDrive.path.replace("\\", "\\\\");
+            filePatternTemp = filePatternTemp.replace("[USB]", usbEscape);
+            System.out.println(">>>>>> " + filePatternTemp);
             Pattern progressPattern = Pattern.compile(antivirus.progressPattern);
             Pattern filePattern = Pattern.compile(filePatternTemp);
 
             boolean virusFound = false;
             String memory = "";
 
-            while ( (line = br.readLine()) != null) {
+            while ((line = br.readLine()) != null) {
 
+                if (mainApp.usbKeySnatched) {
+                    if (process.isAlive())
+                        process.destroy();
+                    break;
+                }
+                
                 System.out.println(antivirus.name + " : " + line);
                 resultFromLine = (JsonObject) processLine.invoke(null, line, progressPattern, filePattern, memory);
                 System.out.println(resultFromLine.toString());
@@ -79,7 +83,7 @@ public class StreamGobbler implements Runnable {
                         case "Virus":
                             virusFound = true;
                             mainApp.positiveFileCount++;
-                            mainApp.scanResult.virusInfos.add(new ScanVirusInfo(mainApp.currentAntivirus.name,mainApp.currentAntivirus.lastUpdateDate.toString(),resultFromLine.get("FileName").getAsString(),resultFromLine.get("VirusName").getAsString() ));
+                            mainApp.scanResult.virusInfos.add(new ScanVirusInfo(mainApp.currentAntivirus.name, mainApp.currentAntivirus.lastUpdateDate.toString(), resultFromLine.get("FileName").getAsString(), resultFromLine.get("VirusName").getAsString()));
 
                             if (process.isAlive())
                                 process.destroy();
@@ -93,13 +97,11 @@ public class StreamGobbler implements Runnable {
                 }
 
             }
-        }
-        catch (Exception ex) {
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
 
     }
-
 
 
 }
