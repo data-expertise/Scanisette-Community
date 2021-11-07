@@ -10,16 +10,18 @@ import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.JavaFXBuilderFactory;
+import javafx.geometry.Pos;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.TextInputDialog;
+import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyCodeCombination;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
 import javafx.scene.transform.Scale;
 import javafx.stage.*;
@@ -113,15 +115,53 @@ public class Scanisette extends Application {
                 public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
                     System.out.println("3 keys to exit");
                     currentScene.setCursor(Cursor.DEFAULT);
-                    TextInputDialog td = new TextInputDialog();
-                    td.initOwner(appStage);
-                    td.setHeaderText("Entrez le code pour quitter le programme");
-                    td.showAndWait();
-                    if (td.getEditor().getText().equals("1122")) {
-                        cleanAppBeforeExit();
-                    } else {
-                        currentScene.setCursor(Cursor.NONE);
-                        td.close();
+//                    TextInputDialog td = new TextInputDialog();
+//                    td.initOwner(appStage);
+//                    td.setHeaderText("Entrez le code pour quitter le programme");
+//                    td.showAndWait();
+//                    if (td.getEditor().getText().equals("1122")) {
+//                        cleanAppBeforeExit();
+//                    } else {
+//                        currentScene.setCursor(Cursor.NONE);
+//                        td.close();
+//                    }
+
+
+                    Dialog<String> dialog = new Dialog<>();
+                    dialog.setTitle("Confirmation");
+                    dialog.initOwner(appStage);
+                    dialog.setHeaderText("Vous souhaitez quitter le programme ?");
+                    dialog.getDialogPane().getButtonTypes().addAll(ButtonType.OK, ButtonType.CANCEL);
+
+                    PasswordField pwd = new PasswordField();
+                    pwd.setFocusTraversable(false);
+                    HBox content = new HBox();
+                    content.setAlignment(Pos.CENTER_LEFT);
+                    content.setSpacing(10);
+                    content.getChildren().addAll(new Label("Entrez le code de sortie :"), pwd);
+                    dialog.getDialogPane().setContent(content);
+                    dialog.setResultConverter(dialogButton -> {
+                        if (dialogButton == ButtonType.OK) {
+                            return pwd.getText();
+                        }
+                        return null;
+                    });
+                    Platform.runLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            pwd.requestFocus();
+                        }
+                    });
+                    Optional<String> result = dialog.showAndWait();
+
+                    if (result.isPresent()) {
+                        System.out.println(result.get());
+                        if (result.get().equals("1122")) {
+                            cleanAppBeforeExit();
+                        } else {
+                            currentScene.setCursor(Cursor.NONE);
+                            dialog.close();
+                        }
                     }
 
                 }
